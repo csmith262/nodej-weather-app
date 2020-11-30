@@ -24,12 +24,10 @@ weatherForum.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const location = search.value
-    const webAddress = 'http://localhost:3000/weather?address=' + location
-
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
 
-    fetch(webAddress).then((resonse) => {
+    fetch('/weather?address=' + location).then((resonse) => {
         resonse.json().then((data) => {
             if (data.error) {
                 messageOne.textContent = ''

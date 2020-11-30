@@ -5,7 +5,7 @@ const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 
 
-messageOne.textContent = 'From javascript'
+messageOne.textContent = ''
 
 weatherForum.addEventListener('submit', (e) => {
     e.preventDefault()

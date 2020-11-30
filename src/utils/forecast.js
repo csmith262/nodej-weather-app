@@ -15,7 +15,13 @@ const forecast = (lat, long, callback) => {
             const precip = body.current.precip
             const city = body.location.name
             const state = body.location.region
-            callback(undefined, body.current.weather_descriptions[0] + ' The temperature is ' + tempature + '.  There is ' + precip + '% of rain.')
+            const humidity = body.current.humidity
+            const feelslike = body.current.feelslike
+            const wind_speed = body.current.wind_speed
+
+            callback(undefined, 'There is ' + body.current.weather_descriptions[0] + 
+              '. The temperature is ' + tempature + ', with a wind speed of ' + 
+              wind_speed + ' and it feels like ' + feelslike + '.  There is ' + precip + '% chance of rain.')
         }
     })
 

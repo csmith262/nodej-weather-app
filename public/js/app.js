@@ -1,16 +1,3 @@
-console.log('Client side')
-
-// fetch('http://localhost:3000/weather?address=Boston').then((resonse) => {
-//     resonse.json().then((data) => {
-//         if (data.error) {
-//             console.log(data.error)
-//         }
-//         else {
-//             console.log(data.location)
-//             console.log(data.forecast)
-//         }
-//     })
-// })
 
 const weatherForum = document.querySelector('form')
 const search = document.querySelector('input')
